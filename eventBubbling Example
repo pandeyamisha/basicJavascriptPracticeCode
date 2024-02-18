@@ -1,0 +1,14 @@
+document.querySelector('#grandParent').addEventListener('click',()=>{
+  console.log("Grandparent clicked")
+})
+
+document.querySelector("#parent").addEventListener('click',(e)=>{
+  console.log("Parent Clicked")
+  console.log("e.curr",e.currentTarget)
+  console.log("e.tar",e.target)
+})
+document.querySelector("#child").addEventListener('click',(e)=>{
+  console.log("Child Clicked")
+})
+
+//passing nothing as the third param is eqaul to assing value of usecapture as false , so in this cases event bubbling will take place
