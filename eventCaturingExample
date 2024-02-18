@@ -1,0 +1,37 @@
+document.querySelector('#grandParent').addEventListener('click',()=>{
+  console.log("Grandparent clicked")
+},true)
+
+document.querySelector("#parent").addEventListener('click',(e)=>{
+  console.log("Parent Clicked")
+  console.log("e.curr",e.currentTarget)
+  console.log("e.tar",e.target)
+},true)
+document.querySelector("#child").addEventListener('click',(e)=>{
+  console.log("Child Clicked")
+},true)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//HTML file for both event capturing and event bubbling example
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event bubbling and Event Capturing in JavaScript example</title>
+  </head>
+
+  <body>
+   <div id="grandParent" style="margin: 100px;width: 1000px;border:1px solid rgb(162, 92, 228); height: 1000px; background-color: rgb(162, 92, 228);">
+    <div id="parent" style="margin: 90px;width: 800px;border:1px solid rgb(225, 116, 43); height: 800px;background-color: rgb(225, 116, 43);">
+    <div id="child" style="margin: 80px;width: 600px;border:1px solid rgb(244, 126, 210);; height: 600px;background-color: rgb(244, 126, 210);">
+
+    </div>
+    </div>
+   </div>
+    
+    <script src="index.js">
+ 
+    </script>
+  </body>
+
+</html>
