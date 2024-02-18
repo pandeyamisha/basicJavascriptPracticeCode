@@ -1,0 +1,11 @@
+function sum(){
+  const arr = Array.from(arguments)
+  return arr.reduce((acc,cur)=>{
+    return acc+=cur
+  },0)
+}
+
+const obj ={
+  inpArr :[1,2]
+}
+console.log(sum.apply(obj,obj.inpArr))
