@@ -1,0 +1,28 @@
+function eventListenerClosure(){
+  let clickCount= 0;
+document.getElementById('clickmeButton').addEventListener('click',function (){
+  console.log("clicked")
+  clickCount+=1;
+  document.getElementById('clickCount').innerText=clickCount;
+})
+}
+eventListenerClosure();
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+HTML Code
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event bubbling and Event Capturing in JavaScript example</title>
+  </head>
+
+  <body>
+    <button id="clickmeButton">clickme</button>
+    <p id="clickCount">showing count :</p>
+    <script src="index.js">
+ 
+    </script>
+  </body>
+
+</html>
