@@ -1,0 +1,38 @@
+const cart =["abc","xyz"]
+let orderId;
+
+createOrder(cart)
+.then(function showOrderSummary(cart){
+ return orderId
+})
+.then(function proceedToPayment(orderId){
+  console.log(`payment successfull for order Id ${orderId}`)
+  return paymentInfo();
+})
+.then(function orderConfimed(){
+  console.log("Order Confirmed successfully")
+
+})
+.catch(function (err){
+  console.log(err.message)
+})
+function createOrder(cart){
+  const pr = new Promise(function (resolve,reject){
+   
+if(!validateCart()){
+  reject(new Error ("Cart is not valid"))
+}
+else{
+  orderId = 130806
+  resolve(orderId)
+}
+  })
+  return pr;
+}
+
+function validateCart(){
+  return true;
+}
+function paymentInfo(){
+  console.log("Payment was successfull")
+}
