@@ -21,17 +21,14 @@ Promise.allSettled([p1,p2,p3])
   console.error(err);
 })
 
-
-FAILURE CASE
-
 const p4= new Promise(function(resolve,reject){
   setTimeout(function(){
-  resolve("P4 Failed")
+  resolve("P4 Success")
   },3000)
 })
 const p5= new Promise(function(resolve,reject){
   setTimeout(function(){
-  resolve("P5 Failed")
+  resolve("P5 success")
   },9000)
 })
 const p6= new Promise(function(resolve,reject){
