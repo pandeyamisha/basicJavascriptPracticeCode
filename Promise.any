@@ -1,29 +1,5 @@
 const p1= new Promise(function(resolve,reject){
   setTimeout(function(){
-  resolve("P1 Success")
-  },3000)
-})
-const p2= new Promise(function(resolve,reject){
-  setTimeout(function(){
-  reject("P2 Fail")
-  },500)
-})
-const p3= new Promise(function(resolve,reject){
-  setTimeout(function(){
-  reject("P3 Fail")
-  },1000)
-})
-Promise.any([p1,p2,p3])
-.then((res) =>{
-  console.log(res)
-})
-.catch((err)=>{
-  console.error(err);
-})
-
-// In case of failure, it gives an aggregated error
-const p1= new Promise(function(resolve,reject){
-  setTimeout(function(){
   reject("P1 Success")
   },3000)
 })
@@ -43,5 +19,6 @@ Promise.any([p1,p2,p3])
 })
 .catch((err)=>{
   console.error(err);
+  console.log(err.errors)
 })
 
