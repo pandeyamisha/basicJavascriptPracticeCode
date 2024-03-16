@@ -1,0 +1,8 @@
+function updateContent(id){
+  return function(content){
+    return document.getElementById(id).innerText = content;
+  }
+}
+
+const updationText = updateContent('clickCount')
+updationText('Hi ');
