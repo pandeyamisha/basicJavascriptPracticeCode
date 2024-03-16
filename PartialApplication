@@ -1,0 +1,9 @@
+Implementation -> Partial Application
+function sum(a){
+  return function(b,c){
+    return a+b+c;
+  }
+}
+const innerSum = sum(20);
+console.log(innerSum)
+console.log(innerSum(9,10));
